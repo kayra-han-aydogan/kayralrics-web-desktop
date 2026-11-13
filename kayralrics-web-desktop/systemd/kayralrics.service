@@ -1,0 +1,14 @@
+[Unit]
+Description=Kayralrics XFCE Web Desktop
+
+[Service]
+Type=simple
+ExecStart=%h/.local/lib/kayralrics/run-desktop.sh
+Restart=always
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=20
+UMask=0077
+
+[Install]
+WantedBy=default.target
